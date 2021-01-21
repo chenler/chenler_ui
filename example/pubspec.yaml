@@ -23,6 +23,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  fluro: 1.7.8
+  chenler_ui:
+      path: ../
 
 
   # The following adds the Cupertino Icons font to your application.

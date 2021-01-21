@@ -1,6 +1,13 @@
+import 'package:example/pages/home/home.dart';
+import 'package:example/route/application.dart';
+import 'package:example/route/router.dart';
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  final router = new FluroRouter();
+  Routes.configureRoutes(router);
+  Application.router = router;
   runApp(MyApp());
 }
 
@@ -21,12 +28,13 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        platform: TargetPlatform.iOS,
         // This makes the visual density adapt to the platform that you run
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        // visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: HomePage(),
     );
   }
 }
