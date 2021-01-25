@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class CUIColor {
   // 背景色
-  static final backgroundColor = Color(0xfff8f8f9);
+  static final backgroundColor = Color.fromRGBO(248, 249, 248, 1.0);
   // 分割线色
   static final dividerColor = Color(0xffe8eaec);
   // 边框色

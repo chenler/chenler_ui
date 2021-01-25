@@ -11,6 +11,8 @@ class Routes {
   static String layoutWrapPage = "/layout_wrap";
   static String colorPage = "/color";
   static String textPage = "/text";
+  static String locationPage = "/map/location";
+  static String listPage = "/list";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = new Handler(
@@ -27,5 +29,7 @@ class Routes {
     router.define(layoutWrapPage, handler: layoutWrapHandler, transitionType: TransitionType.inFromRight);
     router.define(colorPage, handler: colorHandler, transitionType: TransitionType.inFromRight);
     router.define(textPage, handler: textHandler, transitionType: TransitionType.inFromRight);
+    router.define(locationPage, handler: locationHandler, transitionType: TransitionType.inFromRight);
+    router.define(listPage, handler: listHandler, transitionType: TransitionType.inFromRight);
   }
 }

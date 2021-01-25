@@ -1,9 +1,11 @@
 import 'package:example/pages/base/color.dart';
+import 'package:example/pages/base/list.dart';
 import 'package:example/pages/base/text.dart';
 import 'package:example/pages/layout/layout_flex_column.dart';
 import 'package:example/pages/layout/layout_flex_row.dart';
 import 'package:example/pages/layout/layout_stack.dart';
 import 'package:example/pages/layout/layout_wrap.dart';
+import 'package:example/pages/map/location.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:example/pages/layout/layout_container.dart';
@@ -55,5 +57,17 @@ Handler colorHandler = Handler(
 Handler textHandler = Handler(
     handlerFunc: (BuildContext context, Map<String,List<String>> params) {
       return TextPage();
+    }
+);
+
+Handler locationHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String,List<String>> params) {
+      return LocationPage();
+    }
+);
+
+Handler listHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String,List<String>> params) {
+      return ListPage();
     }
 );

@@ -34,7 +34,7 @@ class ListCell extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Material(
-        color: backgroundColor,
+        color: backgroundColor == null ? Colors.white : backgroundColor,
         child: InkWell(
           onTap: onTap,
           onLongPress: onLongPress,
